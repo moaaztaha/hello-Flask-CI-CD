@@ -1,11 +1,24 @@
 from flask import Flask
+from flask import jsonify
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def hello():
-    return "Hello, World!"
+    """Return a friendly HTTP greeting."""
+    print("I am inside hello world")
+    return "Continuous Delivery Demo"
+
+@app.route("/echo/<name>")
+def echo(name):
+    print(f"This was placed in the url: new-{name}")
+    val = {"new-name": name}
+    return jsonify(val)
 
 
-app.run(host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    # Setting debug to True enables debug output. This line should be
+    # removed before deploying a production app.
+    app.debug = True
+    app.run()

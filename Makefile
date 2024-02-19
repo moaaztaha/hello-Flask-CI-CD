@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	#python -m pytest -vv app.py
+	#python -m pytest -vv application.py
 
 lint:
-	pylint --disable=R,C app.py
+	pylint --disable=R,C application.py

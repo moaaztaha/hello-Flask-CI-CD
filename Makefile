@@ -7,3 +7,7 @@ test:
 
 lint:
 	pylint --disable=R,C application.py
+	
+deploy:
+	echo "Deploying APP"
+	eb deploy flask-env

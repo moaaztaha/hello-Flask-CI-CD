@@ -9,7 +9,7 @@ application = Flask(__name__)
 def hello():
     """Return a friendly HTTP greeting."""
     print("I am inside hello world")
-    return "Continuous Delivery Demo when changes are pushed to gh repo"
+    return "Continuous Delivery Demo when changes are pushed to gh repo using AWS ElasticBeanStalk and CodePipeline :)"
 
 @application.route("/echo/<name>")
 def echo(name):
